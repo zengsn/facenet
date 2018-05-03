@@ -92,7 +92,7 @@ def main(args):
                 emb_array[start_index:end_index,:] = sess.run(embeddings, feed_dict=feed_dict)
 
             # save the features to h5 file
-            h5f = h5py.File(dataset_name+'.h5.facenet', 'w')
+            h5f = h5py.File(dataset_name+'.facenet.h5', 'w')
             h5f.create_dataset('/dataset', data=emb_array)
             h5f.close()
 
