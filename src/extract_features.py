@@ -63,9 +63,9 @@ def main(args):
             
             print('Number of classes: %d' % len(dataset))
             print('Number of images: %d' % len(paths))
-            with open(dataset_name+".paths.json", "w") as outfile:
+            with open(args.data_dir+".paths.json", "w") as outfile:
                 json.dump(paths, outfile, indent=4)
-            with open(dataset_name+".labels.json", "w") as outfile:
+            with open(args.data_dir+".labels.json", "w") as outfile:
                 json.dump(labels, outfile, indent=4)
 
             # Load the model
@@ -92,9 +92,10 @@ def main(args):
                 emb_array[start_index:end_index,:] = sess.run(embeddings, feed_dict=feed_dict)
 
             # save the features to h5 file
-            h5f = h5py.File(dataset_name+'.facenet.h5', 'w')
+            h5f = h5py.File(args.data_dir+'.facenet.h5', 'w')
             h5f.create_dataset('/dataset', data=emb_array)
             h5f.close()
+            print('Featutre file saved to '+args.data_dir+'.facenet.h5')
 
             
 def parse_arguments(argv):
