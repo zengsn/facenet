@@ -48,7 +48,7 @@ Currently, the best results are achieved by training the model as a classifier w
 A couple of pretrained models are provided. They are trained using softmax loss with the Inception-Resnet-v1 model. The datasets has been aligned using [MTCNN](https://github.com/davidsandberg/facenet/tree/master/src/align).
 
 ## Performance
-The accuracy on LFW for the model [20170512-110547](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk) is 0.992+-0.003. There is a new pre-trained model [20180402-114759.zip](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-). But I found out that sometimes 20170512-110547 is better than 20180402-114759. A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw).
+The accuracy on LFW for the model [20170512-110547](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk) is 0.992+-0.003. There is a new pre-trained model [20180402-114759.zip](https://drive.google.com/open?id=1EXPBSXwTaqrSC0OhUdXNmKSh9qJUQ55-). **But I found out that sometimes 20170512-110547 is better than 20180402-114759.** A description of how to run the test can be found on the page [Validate on LFW](https://github.com/davidsandberg/facenet/wiki/Validate-on-lfw).
 
 ## Extract featrues 
 We can extract features from aligned face images via [src/extract_features.py](https://github.com/zengsn/facenet/blob/master/src/extract_features.py).   
